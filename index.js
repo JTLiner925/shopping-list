@@ -22,10 +22,10 @@ $(function() {
   });
 });
 //check and uncheck items by EVENT clicking "check" button
-$(function(){
-
+$('.shopping-list').on('click', '.shopping-item-toggle', function(event) { 
+  $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
 });
 //remove items from list by EVENT clicking "delete" button
-$(function(){
-
+$('.shopping-list').on('click', '.shopping-item-delete', function(event) { 
+  $(this).closest('li').remove()
 });
